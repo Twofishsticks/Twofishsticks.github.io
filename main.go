@@ -33,7 +33,6 @@ func main() {
 				"title": "Home Page",
 			},
 		)
-
 	})
 
 	// Start serving the application
