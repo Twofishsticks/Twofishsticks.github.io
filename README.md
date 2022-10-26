@@ -1,5 +1,13 @@
-# Twofishsticks.github.io
-Webpage that displays all of my professional, complete work.
+# research-milestone-Twofishsticks
+research-milestone-Twofishsticks created by GitHub Classroom
 
-## Currently in the process of overhauling this into golang, using the gin framework. 
-As such, this page won't be in perfect condition. Please pardon my dust!
+link to original repo: https://github.com/Twofishsticks/Twofishsticks.github.io 
+
+This program is designed to create a server and webpage for my collections of created programs. 
+
+Created in Go, using gin framework, with the help of some classic html. 
+
+If you would like to re-build, use go build -o "application name". app.exe has been provided for ease of access
+
+To run, execute the built go file on your machine, and navigate to localhost 8080 in your browser. 
+
