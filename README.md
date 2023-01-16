@@ -1,7 +1,4 @@
-# research-milestone-Twofishsticks
-research-milestone-Twofishsticks created by GitHub Classroom
-
-link to original repo: https://github.com/Twofishsticks/Twofishsticks.github.io 
+# Trey Sturman - Portfolio 
 
 This program is designed to create a server and webpage for my collections of created programs. 
 
