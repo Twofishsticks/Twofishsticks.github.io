@@ -1,3 +1,3 @@
 # Trey Sturman - Portfolio 
 
-Currently swapping over to Javascript, from Go, to allow Github to handle the webpages better
+Currently swapping over to Javascript, from Golang! Still in progress!
