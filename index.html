@@ -22,14 +22,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
     <a href="https://github.com/Twofishsticks" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">GitHub</a>
+    <a href="Base Resume.pdf" class="w3-bar-item w3-button w3-padding-large">Resume</a>
     <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a> -->
 </div>
 
 <!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+<div id="navBar" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
     <a href="https://github.com/Twofishsticks" class="w3-bar-item w3-button w3-padding-large">GitHub</a>
+    <a href="Base Resume.pdf" class="w3-bar-item w3-button w3-padding-large">Resume</a>
+
     <!--<a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a> -->
@@ -125,7 +128,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <script>
 // Used to toggle the menu on thin screens like a phone when clicking on the menu button
 function myFunction() {
-var x = document.getElementById("navDemo");
+var x = document.getElementById("navBar");
 if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
 } else { 
