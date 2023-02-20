@@ -1,3 +1,3 @@
 # Trey Sturman - Portfolio 
 
-Currently swapping over to Javascript, from Golang! Still in progress!
+Website containing details about me and my work experience!
