@@ -9,6 +9,92 @@
 <link rel=" stylesheet" href = "https://fonts.googleapis.com/css?family=Play">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+    * {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
 body,h1,h2,h3,h4,h5,h6 {font-family: "Righteous", sans-serif}
 .w3-bar,h1,button {font-family: "Play", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px} 
@@ -58,9 +144,69 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Righteous", sans-serif}
     <p class = "w3-text-grey">The machine is now FINISHED! I'm waiting on a usb hub to arrive so that I don't have to install another usb port on the pi for the other encoder, but other than that it's complete! I certainly won't show the actual games, just trust that every game's ROM was obtained through the right avenues!</p>
 </div>
     <div class="w3-third w3-center">
-        <img src= "ArcadePhoto1.jpg" style="width:300px;height:400px;">
+        <!-- Container for the image gallery -->
+        <div class="container">
+
+    <!-- Full-width images with number text -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+        <img src="ArcadePhoto1.jpg" style="width:100%">
     </div>
-    <!-- Make sure to put it in the directory-->
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+        <img src="ArcadePhoto2.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+        <img src="ArcadePhoto3.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+        <img src="ArcadePhoto4.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+        <img src="ArcadePhoto5.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+        <img src="ArcadePhoto6.jpg" style="width:100%">
+    </div>
+  
+
+    <!-- Image text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  
+    <!-- Thumbnail images -->
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="ArcadePhoto1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Gluing the Wood Together">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="ArcadePhoto2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Added Spraypaint">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="ArcadePhoto3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Added Spraypaint 2">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="ArcadePhoto4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Added Back Panel Hinge">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="ArcadePhoto5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Added Buttons/Joysticks">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="ArcadePhoto6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Finished!">
+      </div>
+    </div>
+  </div>
+    </div>
 </div>
 </div>
 
@@ -137,6 +283,36 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Righteous", sans-serif}
 </footer>
 
 <script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
 // Used to toggle the menu on thin screens like a phone when clicking on the menu button
 function myFunction() {
 var x = document.getElementById("navBar");
