@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Trey Sturman Webpage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous">
+<link rel=" stylesheet" href = "https://fonts.googleapis.com/css?family=Play">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Righteous", sans-serif}
+.w3-bar,h1,button {font-family: "Play", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px} 
+</style> 
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+<div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+    <a href="backmullet.html" class="w3-bar-item w3-button w3-padding-large w3-white">Personal</a>
+    <a href="https://github.com/Twofishsticks" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">GitHub</a>
+    <a href="OnePage Resume.pdf" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Resume</a>
+    <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a> -->
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navBar" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="index.html" class= "w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="https://github.com/Twofishsticks" class= "w3-bar-item w3-button w3-padding-large">GitHub</a>
+    <a href="OnePage Resume.pdf" class="w3-bar-item w3-button w3-padding-large">Resume</a>
+    
+    <!--<a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a> -->
+</div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+<h1 class="w3-margin w3-jumbo">GoMap - Behind the Scenes</h1>
+<p class="w3-xlarge"></p>
+<!-- put the black button here, send to the actual page-->
+<form action= "https://sccapstone.github.io/BitCrunch/">
+  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">"Official" Website</button>
+</form>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+<div class="w3-content">
+    <div class="w3-twothird">
+    <h1>What's GoMap?</h1>
+    <h5 class="w3-padding-32">Quick Overview</h5>
+    <p class = "w3-text-grey">GoMap is the Capstone project BitCrunch has worked on from the Fall ‘22 to Spring ’23 semesters. Our main goal is to help IT technicians in the field to detect and diagnose the causes of various issues with their assigned devices, without the use of messy and long console commands. At the click of a button, users are able to run a specific script to a chosen device, just like how they would through the console. This greatly lowers the skill floor for IT technicians, and allows easier repair (or non-repair) of their machines.
+</p>
+    <h5 class = "w3-padding-32">Long Overview</h5>
+    <p class = "w3-text-grey">      GoMap is designed to be run on an intranet, local to the area of which a group of IT technicians perform their duties. As for this demonstration, with the application being uploaded to the internet, we have removed the ability to run any scripts outside of the basic “ping”, to be sure that nothing nefarious happens on behalf of our users. <br><br>I also made a website for this website, so that users of GoMap could get a better feel of what GoMap is used for. A link to that can be found here: <a href= "https://sccapstone.github.io/BitCrunch/">https://sccapstone.github.io/BitCrunch/</a> and, most importantly, includes a video of the team using it. Everything on the GitHub page : <a href = "https://github.com/SCCapstone/BitCrunch">https://github.com/SCCapstone/BitCrunch</a>, has not been touched since the due date of the project, including the wiki, so things may be a bit messy. However, as the leader of the team, I'm happy to answer any questions you may have about it!</p>
+</div>
+    <div class="w3-third w3-center">
+       <!-- Container for the image gallery -->
+       <div class="container">
+
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+            <img src="images/GoMapSignIn.png" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+            <img src="images/GoMapSignup.png " style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+            <img src="images/GoMapEntryPage.png" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+            <img src="images/GoMapAddLayer.png" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+            <img src="images/GoMapPingResult.png" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+            <img src="images/GoMapGinOutput.png" style="width:100%">
+        </div>
+      
+    
+        <!-- Image text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      
+        <!-- Thumbnail images -->
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="images/GoMapSignIn.png" style="width:100%" onclick="currentSlide(1)" alt="Sign-In Page">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/GoMapSignup.png" style="width:100%" onclick="currentSlide(2)" alt="Sign Up (with email forget-password!)">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/GoMapEntryPage.png" style="width:100%" onclick="currentSlide(3)" alt="Base Landing Page">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/GoMapAddLayer.png" style="width:100%" onclick="currentSlide(4)" alt="Adding a Layer/Floor">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/GoMapPingResult.png" style="width:100%" onclick="currentSlide(5)" alt="Result of Pinging a Device">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/GoMapGinOutput.png" style="width:100%" onclick="currentSlide(6)" alt="Gin's Output for easy debugging">
+          </div>
+        </div>
+      </div>
+  </div>
+    </div>
+</div>
+</div>
+
+<!--Black line at bottom-->
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+  <h1 class="w3-margin w3-xlarge">Check me out on my socials!</h1>
+</div>
+
+<!-- Footer -->
+<!-- possible place to put all links to socials and stuff-->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+<div class="w3-xlarge w3-padding-32"> <!--socials go in here-->
+  <!---->
+  <a href="https://github.com/Twofishsticks">
+  <i class="fa fa-github w3-hover-opacity"></i></a>
+
+  <a href="https://youtu.be/dQw4w9WgXcQ">
+  <i class="fa fa-youtube-square w3-hover-opacity"></i></a>
+
+  <a href = "https://www.linkedin.com/in/trey-sturman/"> <i class="fa fa-linkedin w3-hover-opacity"></i></a>
+  <!--
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  -->
+  <!-- make a 2fishsticks img in here, link to personal stash of random junk -->
+</div>
+</footer>
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+// Used to toggle the menu on thin screens like a phone when clicking on the menu button
+function myFunction() {
+var x = document.getElementById("navBar");
+if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+} else { 
+    x.className = x.className.replace(" w3-show", "");
+}
+}
+</script>
+
+</body>
+</html>
