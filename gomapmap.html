@@ -104,8 +104,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Righteous", sans-serif}
 
 <!-- Navbar -->
 <div class="w3-top">
-<div class="w3-bar w3-red w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+<div class="w3-bar w3-cyan w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-cyan" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
     <a href="backmullet.html" class="w3-bar-item w3-button w3-padding-large w3-white">Personal</a>
     <a href="https://github.com/Twofishsticks" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">GitHub</a>
@@ -128,7 +128,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Righteous", sans-serif}
 </div>
 
 <!-- Header -->
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+<header class="w3-container w3-cyan w3-center" style="padding:128px 16px">
 <h1 class="w3-margin w3-jumbo">GoMap - Behind the Scenes</h1>
 <p class="w3-xlarge"></p>
 <!-- put the black button here, send to the actual page-->
@@ -215,6 +215,26 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Righteous", sans-serif}
     </div>
 </div>
 </div>
+<div class = "w3-row-padding  w3-container"> 
+  <div class = "w3-content"> 
+    <h1 >EXTREME Overview</h1>
+        <p class = "w3-text-black">We are currently finished with the project! I made the website explaining what our project is, you can find that here: <a href = 'https://sccapstone.github.io/BitCrunch/'>https://sccapstone.github.io/BitCrunch/</a>, and our GitHub repo here <a href=’https://github.com/SCCapstone/BitCrunch'> https://github.com/SCCapstone/BitCrunch</a>. </p>
+
+        <p class="w3-text-grey">GoWeb, built using Golang, is designed to be an IT help website, hosted on a local webserver (or on an Intranet rather than an Internet), which allows IT technicians to effortlessly run specific commands to any statically domained IP object, such as printers or Wireless Access Points(WAP). The idea for this came about from my summer at CCSD (seen above), where some technicians struggled with or never used console commands to check problematic devices. GoWeb makes it so that technicians can run scripts to a device at a click of a button!</p>
+        <p class="w3-text-grey">Our Capstone project at the University of South Carolina is structured in such a way that the students build the project from the ground up, going from an idea into a full fledged product. For more information, feel free to check out the webpage for the class here: <a href='https://capstone.cse.sc.edu/'>https://capstone.cse.sc.edu/</a>. </p>
+        <p class="w3-text-grey">From a technical standpoint, the webapp, using a combination of Golang, HTML, CSS, and Javascript, holds information about users, floors, and devices using SQL. Running commands are done using Go's os library, through a custom function written by me. Unit testing is done using Golang's testing library, while Behavorial testing is done using go-rod, which you can read more about here: <a href='https://go-rod.github.io/#/'>https://go-rod.github.io/#/</a>. </p>
+        <p class="w3-text-grey">In my group, I filled the role of "Ideas and Implementation", alongside "Testing". I was the person coming up with the ideas, helping people move those ideas into physical form, and making sure the implementation was sound. I like to think of myself as the leader of the group, especially during the first few steps of getting our idea off the ground. If someone needed help, I was there. If someone had an idea, I made sure everyone else acknowledged them and understood all aspects of that idea. In addition, I also completed Unit and Behavorial Testing on my own, both of which test the application to completion(Test-Based Development). I also wrote the custom function to run scripts, which has an option for comments in addition to to normal commands.</p>
+        
+  </div>
+</div>
+<!--<h5 class="w3-padding-32">Capstone Project - GoWeb</h5>
+        <p class = "w3-text-black">We are currently finished with the project! I made the website explaining what our project is, you can find that here: <a href = 'https://sccapstone.github.io/BitCrunch/'>https://sccapstone.github.io/BitCrunch/</a>, and our GitHub repo here <a href=’https://github.com/SCCapstone/BitCrunch'> https://github.com/SCCapstone/BitCrunch</a>. </p>
+
+        <p class="w3-text-grey">GoWeb, built using Golang, is designed to be an IT help website, hosted on a local webserver (or on an Intranet rather than an Internet), which allows IT technicians to effortlessly run specific commands to any statically domained IP object, such as printers or Wireless Access Points(WAP). The idea for this came about from my summer at CCSD (seen above), where some technicians struggled with or never used console commands to check problematic devices. GoWeb makes it so that technicians can run scripts to a device at a click of a button!</p>
+        <p class="w3-text-grey">Our Capstone project at the University of South Carolina is structured in such a way that the students build the project from the ground up, going from an idea into a full fledged product. For more information, feel free to check out the webpage for the class here: <a href='https://capstone.cse.sc.edu/'>https://capstone.cse.sc.edu/</a>. </p>
+        <p class="w3-text-grey">From a technical standpoint, the webapp, using a combination of Golang, HTML, CSS, and Javascript, holds information about users, floors, and devices using SQL. Running commands are done using Go's os library, through a custom function written by me. Unit testing is done using Golang's testing library, while Behavorial testing is done using go-rod, which you can read more about here: <a href='https://go-rod.github.io/#/'>https://go-rod.github.io/#/</a>. </p>
+        <p class="w3-text-grey">In my group, I filled the role of "Ideas and Implementation", alongside "Testing". I was the person coming up with the ideas, helping people move those ideas into physical form, and making sure the implementation was sound. I like to think of myself as the leader of the group, especially during the first few steps of getting our idea off the ground. If someone needed help, I was there. If someone had an idea, I made sure everyone else acknowledged them and understood all aspects of that idea. In addition, I also completed Unit and Behavorial Testing on my own, both of which test the application to completion(Test-Based Development). I also wrote the custom function to run scripts, which has an option for comments in addition to to normal commands.</p>
+        -->
 
 <!--Black line at bottom-->
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
